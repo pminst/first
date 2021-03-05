@@ -54,7 +54,8 @@
     $(".nav").find(".active").removeClass("active");
     $('a[href="' + location.pathname + '"]').addClass("active");
     $('a[href="' + location.pathname + '"]').parent().addClass("active");
-    if (location.pathname === '/') {
+    var page = location.pathname.split("/").pop();
+    if (page === '') {
       $('body > .container').addClass('homepage')
     }
 
