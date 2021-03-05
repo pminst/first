@@ -1,30 +1,18 @@
 ; (function () {
   $(document).ready(function () {
-    // AOS.init({offset: 0, once: true});
 
-    // $('a').click(function(event) {
+    $('a').click(function(event) {
 
-    //   if ($(this).hasClass('nav-link') || $(this).hasClass('navbar-brand')) {
-    //     event.preventDefault();
-    //     var url = $(this).attr('href')
-    //     $("html, body").animate({
-    //       opacity: 0
-    //     }, 300, function() {
-    //       window.location.href = url;
-    //     })
-    //   }
-    // })
-
-    // $(window).add(".modal").on("scroll", function () {
-    //   var scroll = $(this).scrollTop();
-    //   if (scroll < 50) {
-    //     $(".navbar").removeClass("sticky");
-    //     $("#back-top").fadeOut(700);
-    //   } else {
-    //     $(".navbar").addClass("sticky");
-    //     $("#back-top").fadeIn(700);
-    //   }
-    // });
+      if ($(this).hasClass('nav-link') || $(this).hasClass('navbar-brand')) {
+        event.preventDefault();
+        var url = $(this).attr('href')
+        $("html, body").animate({
+          opacity: 0
+        }, 300, function() {
+          window.location.href = url;
+        })
+      }
+    })
 
     $(".navbar-toggler").click(function() {
       var navbar = $(".navbar-collapse");
@@ -51,10 +39,10 @@
       autoplaySpeed: 3000,
       arrows: true,
       nextArrow:'<a class="carousel-control-next-icon nextArrow" aria-hidden="true"></a>',
-      prevArrow:'<a class="carousel-control-prev-icon prevArrow" aria-hidden="true"></a>',
+      prevArrow:'<a class="carousel-control-prev-icon prevArrow d-none d-md-block" aria-hidden="true"></a>',
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 992,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
