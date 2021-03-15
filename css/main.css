@@ -47,6 +47,9 @@ p {
   margin-bottom: 20px;
   line-height: 22px; }
 
+img {
+  max-width: 100%; }
+
 /* Navbar */
 .navbar {
   padding: 0;
